@@ -17,10 +17,10 @@ apt-get upgrade -y
 apt-get install -y jq curl unzip tar
 
 # Install AWS CLI v2
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o /tmp/awscliv2.zip
-unzip -q /tmp/awscliv2.zip -d /tmp/awscliv2
-/tmp/awscliv2/aws/install
-rm -rf /tmp/awscliv2.zip /tmp/awscliv2
+#curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o /tmp/awscliv2.zip
+#unzip -qo /tmp/awscliv2.zip -d /tmp/awscliv2
+#/tmp/awscliv2/aws/install --update
+#rm -rf /tmp/awscliv2.zip /tmp/awscliv2
 
 # Install oc (OpenShift client)
 curl -L "https://github.com/okd-project/okd/releases/download/4.21.0-okd-scos.6/openshift-client-linux-amd64-rhel9-4.21.0-okd-scos.6.tar.gz" \
