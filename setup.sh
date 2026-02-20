@@ -29,6 +29,13 @@ curl -L "https://github.com/okd-project/okd/releases/download/4.21.0-okd-scos.6/
 tar -xzf /tmp/oc.tar.gz -C /usr/local/bin oc
 rm /tmp/oc.tar.gz
 
+# Install glab (GitLab CLI)
+GLAB_VERSION="1.86.0"
+curl -L "https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_amd64.deb" \
+  -o /tmp/glab.deb
+dpkg -i /tmp/glab.deb
+rm /tmp/glab.deb
+
 # 4. Merge hooks, env, attribution, and permissions into settings.json
 jq -s '.[0] * {"hooks": .[1].hooks} * {env: .[2].env, attribution: .[2].attribution, permissions: .[2].permissions}' \
   "${HOME}/.claude/settings.json" \
