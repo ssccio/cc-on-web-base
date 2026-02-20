@@ -23,11 +23,11 @@ apt-get install -y jq curl unzip tar
 #rm -rf /tmp/awscliv2.zip /tmp/awscliv2
 
 # Install oc (OpenShift client)
-curl -L "https://github.com/okd-project/okd/releases/download/4.21.0-okd-scos.6/openshift-client-linux-amd64-rhel9-4.21.0-okd-scos.6.tar.gz" \
+#curl -L "https://github.com/okd-project/okd/releases/download/4.21.0-okd-scos.6/openshift-client-linux-amd64-rhel9-4.21.0-okd-scos.6.tar.gz" \
 #curl -L "https://github.com/okd-project/okd/releases/download/4.21.0-okd-scos.6/openshift-client-linux-arm64-rhel9-4.21.0-okd-scos.6.tar.gz" \
-  -o /tmp/oc.tar.gz
-tar -xzf /tmp/oc.tar.gz -C /usr/local/bin oc
-rm /tmp/oc.tar.gz
+#  -o /tmp/oc.tar.gz
+#tar -xzf /tmp/oc.tar.gz -C /usr/local/bin oc
+#rm /tmp/oc.tar.gz
 
 # Install glab (GitLab CLI)
 GLAB_VERSION="1.86.0"
