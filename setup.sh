@@ -44,10 +44,11 @@ jq -s '.[0] * {"hooks": .[1].hooks} * {env: .[2].env, attribution: .[2].attribut
   && mv "${HOME}/.claude/settings.json.tmp" "${HOME}/.claude/settings.json"
 
 # 5. Copy content directories into ~/.claude/
-cp -r "${SCRIPT_DIR}/skills" "${HOME}/.claude/skills"
-cp -r "${SCRIPT_DIR}/scripts" "${HOME}/.claude/scripts"
-cp -r "${SCRIPT_DIR}/agents" "${HOME}/.claude/agents"
-cp -r "${SCRIPT_DIR}/templates" "${HOME}/.claude/templates"
+mkdir -p "${HOME}/.claude/skills" "${HOME}/.claude/scripts" "${HOME}/.claude/agents" "${HOME}/.claude/templates"
+cp -r "${SCRIPT_DIR}/skills/." "${HOME}/.claude/skills"
+cp -r "${SCRIPT_DIR}/scripts/." "${HOME}/.claude/scripts"
+cp -r "${SCRIPT_DIR}/agents/." "${HOME}/.claude/agents"
+cp -r "${SCRIPT_DIR}/templates/." "${HOME}/.claude/templates"
 
 # 6. Copy MCP server configuration
 cp "${SCRIPT_DIR}/mcp.json" "${HOME}/.mcp.json"
